@@ -1,6 +1,13 @@
 -var titulo = "Título Principal"
 -var titulos = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
 -var usuario = "Cristian"
+mixin caja(imagen, titulo, contenido)
+	.caja
+		.caja__imagen: img(src="images/"+imagen)
+		.caja__contenido
+			h3=titulo
+			p=contenido
+			a.boton Leer Mas
 doctype html
 html(lang="en")
 	head
@@ -25,6 +32,7 @@ html(lang="en")
 					| Lorem ipsum dolor sit amet.
 					span Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptatibus!
 				a.boton Leer Mas
-		ul
-			each titulo in titulos
-				li=titulo
+		main.contenido
+			+caja("imagen.png", titulos[1], "Lorem ipsum dolor sit amet.")
+			+caja("imagen.png", titulos[2], "Lorem ipsum dolor sit amet.")
+			+caja("imagen.png", titulos[3], "Lorem ipsum dolor sit amet.")
