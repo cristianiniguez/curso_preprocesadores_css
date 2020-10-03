@@ -1,10 +1,12 @@
+-var titulo = "Título Principal"
+-var titulos = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
 doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		link(rel="stylesheet", href="css/ejercicio-pug.css")
-		title Document
+		title PlatziGames
 	body
 		header
 			h1 PlatziGames
@@ -12,7 +14,7 @@ html(lang="en")
 		section.intro
 			.intro__imagen: img(src="images/imagen.png")
 			.intro__contenido
-				h2 Título Principal
+				h2 #{titulos[0]}
 				p
 					| Lorem ipsum dolor sit amet.
 					| Lorem ipsum dolor sit amet.
