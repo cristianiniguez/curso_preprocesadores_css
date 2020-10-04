@@ -1,3 +1,13 @@
 extends components/plantilla.pug
 block contenidos
-  h1 Homepage
+  main.homepage
+    section.homepage__menu.menu
+      h2 Menu
+      ul
+        each enlace in enlaces
+          li=enlace
+    section.homepage__contenido
+      h2 Título Principal
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium soluta ab error vitae ex, ut temporibus sint. Cumque eveniet totam eaque, eos dolore quod enim laboriosam, in provident doloribus ullam suscipit qui aspernatur nesciunt debitis magni dolorum a tenetur sint similique repellat explicabo fugiat esse! Odio quaerat magnam voluptatem?
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium soluta ab error vitae ex, ut temporibus sint. Cumque eveniet totam eaque, eos dolore quod enim laboriosam, in provident doloribus ullam suscipit qui aspernatur nesciunt debitis magni dolorum a tenetur sint similique repellat explicabo fugiat esse! Odio quaerat magnam voluptatem?
+      a.boton Ver mas
