@@ -6,6 +6,32 @@
 @fuente2: "Oswald", sans-serif;
 @fuente-base: 18px;
 
+@modo-oscuro: true;
+
+.DarkMode() when (@modo-oscuro) {
+	body {
+		background-color: @color-primario;
+	}
+	.intro {
+		background-color: @color-secundario;
+	}
+	.articulo--principal {
+		color: @color-claro;
+		h1,
+		h2,
+		h3 {
+			color: @color-secundario;
+		}
+	}
+	.caja__contenido {
+		background-color: @color-secundario;
+		color: @color-claro;
+		a {
+			color: @color-claro;
+		}
+	}
+}
+
 .sombra-caja {
 	box-shadow: 0px 5px 15px 0px fade(@color-primario, 50%);
 }
@@ -37,4 +63,8 @@ h2,
 h3 {
 	margin: 0;
 	.Oswald();
+}
+
+html {
+	.DarkMode();
 }
